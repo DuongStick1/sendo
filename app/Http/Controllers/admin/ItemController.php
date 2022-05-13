@@ -59,6 +59,7 @@ class ItemController extends Controller
         $validation = Validator::make($request->all(),[
           'cat_id' => 'required',
           'item_name' => 'required',
+          'quantity' => 'required',
           'price' => 'required',
           'file' => 'required',
         ]);
@@ -78,6 +79,7 @@ class ItemController extends Controller
             $item->cat_id =htmlspecialchars($request->cat_id, ENT_QUOTES, 'UTF-8');
             $item->item_name =htmlspecialchars($request->item_name, ENT_QUOTES, 'UTF-8');
             $item->item_price =htmlspecialchars($request->price, ENT_QUOTES, 'UTF-8');
+            $item->quantity =htmlspecialchars($request->quantity, ENT_QUOTES, 'UTF-8');
             $item->item_description =htmlspecialchars($request->description, ENT_QUOTES, 'UTF-8');
             $item->delivery_time =htmlspecialchars($request->delivery_time, ENT_QUOTES, 'UTF-8');
             $item->save();
@@ -264,6 +266,7 @@ class ItemController extends Controller
           'getcat_id' => 'required',
           'item_name' => 'required',
           'getprice' => 'required',
+          'quantity' => 'required',
           'getdescription' => 'required'
         ]);
 
@@ -286,6 +289,7 @@ class ItemController extends Controller
             $item->cat_id =htmlspecialchars($request->getcat_id, ENT_QUOTES, 'UTF-8');
             $item->item_name =htmlspecialchars($request->item_name, ENT_QUOTES, 'UTF-8');
             $item->item_price =htmlspecialchars($request->getprice, ENT_QUOTES, 'UTF-8');
+            $item->quantity =htmlspecialchars($request->quantity, ENT_QUOTES, 'UTF-8');
             $item->item_description =htmlspecialchars($request->getdescription, ENT_QUOTES, 'UTF-8');
             $item->delivery_time =htmlspecialchars($request->getdelivery_time, ENT_QUOTES, 'UTF-8');
             $item->save();

@@ -50,6 +50,10 @@
                             <input type="text" class="form-control" name="price" id="price" placeholder="Price">
                         </div>
                         <div class="form-group">
+                            <label for="quantity" class="col-form-label">Quantity:</label>
+                            <input type="number" class="form-control" name="quantity" id="quantity" placeholder="Quantity">
+                        </div>
+                        <div class="form-group">
                             <label for="delivery_time" class="col-form-label">Delivery time:</label>
                             <input type="text" class="form-control" name="delivery_time" id="delivery_time" placeholder="Delivery time">
                         </div>
@@ -113,6 +117,12 @@
                                 <label for="getprice" class="col-form-label">Price:</label>
                                 <input type="text" class="form-control" name="getprice" id="getprice" placeholder="Price">
                             </div>
+
+                            <div class="form-group">
+                                <label for="getquantity" class="col-form-label">Quantity:</label>
+                                <input type="number" class="form-control" name="quantity" id="getquantity" placeholder="Quantity">
+                            </div>
+
                             <div class="form-group">
                                 <label for="getdelivery_time" class="col-form-label">Delivery time:</label>
                                 <input type="text" class="form-control" name="getdelivery_time" id="getdelivery_time" placeholder="Delivery time">
@@ -257,6 +267,7 @@ function GetData(id) {
             $('#getcat_id').val(response.ResponseData.cat_id);
             $('#getitem_name').val(response.ResponseData.item_name);
             $('#getprice').val(response.ResponseData.item_price);
+            $('#getquantity').val(response.ResponseData.quantity);
             $('#getdelivery_time').val(response.ResponseData.delivery_time);
             $('#getdescription').val(response.ResponseData.item_description);
         },

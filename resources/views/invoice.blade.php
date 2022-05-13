@@ -87,10 +87,11 @@
                                 </div>
                                 @endforeach
 
+                            </td>
+                            <td class="center"> 
                                 @if ($orders->item_notes != "")
                                     <b>Item Notes</b> : {{$orders->item_notes}}
-                                @endif
-                            </td>
+                                @endif</td>
                             <td class="left"><?php echo env('CURRENCY').''.number_format($orders->item_price, 2); ?></td>
                             <td class="center">{{$orders->qty}}</td>
                             <td class="right"><?php echo env('CURRENCY'); ?>{{number_format($orders->total_price, 2)}}</td>

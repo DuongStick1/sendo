@@ -762,4 +762,11 @@ class CheckoutController extends Controller
             return response()->json(['status'=>0,'message'=>'Delivery is not available in your area'],200);
         }
     }
+
+    // public function checkQuantity(Request $request)
+    // {
+    //     if($request->quantity == ""){
+    //         return 
+    //     }
+    // }
 }
