@@ -17,9 +17,24 @@
         <div class="col-12">
             <div class="card">
                 <div class="card-body">
-                     <h4 class="card-title">All Ordres</h4>
+                     <h4 class="card-title">All Ordres Today</h4>
                     <div class="table-responsive" id="table-display">
                         @include('theme.orderstable')
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+</div>
+
+<div class="container-fluid">
+    <div class="row">
+        <div class="col-12">
+            <div class="card">
+                <div class="card-body">
+                     <h4 class="card-title">All Ordres Sum</h4>
+                    <div class="table-responsive" id="table-display">
+                        @include('theme.AllOrderTable')
                     </div>
                 </div>
             </div>

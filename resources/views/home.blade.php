@@ -7,7 +7,7 @@
         <div class="row">
             <div class="col-lg-3 col-sm-6">
                 <div class="card gradient">
-                    <div class="card-body" style="background: #B98068;">
+                    <div class="card-body" style="background: #33907C;">
                         <h3 class="card-title text-white">Categories</h3>
                         <div class="d-inline-block">
                             <h2 class="text-white">{{count($getcategory)}}</h2>
@@ -18,7 +18,7 @@
             </div>
             <div class="col-lg-3 col-sm-6">
                 <div class="card gradient">
-                    <div class="card-body" style="background: #B98068;">
+                    <div class="card-body" style="background: #33907C;">
                         <h3 class="card-title text-white">Items</h3>
                         <div class="d-inline-block">
                             <h2 class="text-white">{{count($getitems)}}</h2>
@@ -29,7 +29,7 @@
             </div>
             <div class="col-lg-3 col-sm-6">
                 <div class="card gradient">
-                    <div class="card-body" style="background: #B98068;">
+                    <div class="card-body" style="background: #33907C;">
                         <h3 class="card-title text-white">Add-ons</h3>
                         <div class="d-inline-block">
                             <h2 class="text-white">{{count($addons)}}</h2>
@@ -40,7 +40,7 @@
             </div>
             <div class="col-lg-3 col-sm-6">
                 <div class="card gradient">
-                    <div class="card-body" style="background: #B98068;">
+                    <div class="card-body" style="background: #33907C;">
                         <h3 class="card-title text-white">Users</h3>
                         <div class="d-inline-block">
                             <h2 class="text-white">{{count($getusers)}}</h2>
@@ -51,7 +51,7 @@
             </div>
             <div class="col-lg-3 col-sm-6">
                 <div class="card gradient">
-                    <div class="card-body" style="background: #B98068;">
+                    <div class="card-body" style="background: #33907C;">
                         <h3 class="card-title text-white">Orders</h3>
                         <div class="d-inline-block">
                             <h2 class="text-white">{{count($getorders)}}</h2>
@@ -62,7 +62,7 @@
             </div>
             <div class="col-lg-3 col-sm-6">
                 <div class="card gradient">
-                    <div class="card-body" style="background: #B98068;">
+                    <div class="card-body" style="background: #33907C;">
                         <h3 class="card-title text-white">Reviews</h3>
                         <div class="d-inline-block">
                             <h2 class="text-white">{{count($getreview)}}</h2>
@@ -73,7 +73,7 @@
             </div>
             <div class="col-lg-3 col-sm-6">
                 <div class="card gradient">
-                    <div class="card-body" style="background: #B98068;">
+                    <div class="card-body" style="background: #33907C;">
                         <h3 class="card-title text-white">Promocode</h3>
                         <div class="d-inline-block">
                             <h2 class="text-white">{{count($getpromocode)}}</h2>
@@ -84,7 +84,7 @@
             </div>
             <div class="col-lg-3 col-sm-6">
                 <div class="card gradient-1">
-                    <div class="card-body" style="background: #B98068;">
+                    <div class="card-body" style="background: #33907C;">
                         <h3 class="card-title text-white">Driver</h3>
                         <div class="d-inline-block">
                             <h2 class="text-white">{{count($driver)}}</h2>
@@ -106,7 +106,7 @@
             </div> -->
             <div class="col-lg-3 col-sm-6">
                 <div class="card gradient">
-                    <div class="card-body" style="background: #B98068;">
+                    <div class="card-body" style="background: #33907C;">
                         <h3 class="card-title text-white">Tax</h3>
                         <div class="d-inline-block">
                             <h2 class="text-white">{{ number_format(Auth::user()->tax, 2) }}</h2>
@@ -117,7 +117,7 @@
             </div>
             <div class="col-lg-3 col-sm-6">
                 <div class="card gradient">
-                    <div class="card-body" style="background: #B98068;">
+                    <div class="card-body" style="background: #33907C;">
                         <h3 class="card-title text-white">Tax</h3>
                         <div class="d-inline-block">
                             <h2 class="text-white" style="font-size: 20px;"><?php echo env('CURRENCY'); ?>{{ number_format($order_tax, 2) }}</h2>
@@ -128,7 +128,7 @@
             </div>
             <div class="col-lg-3 col-sm-6">
                 <div class="card gradient">
-                    <div class="card-body" style="background: #B98068;">
+                    <div class="card-body" style="background: #33907C;">
                         <h3 class="card-title text-white">Earning</h3>
                         <div class="d-inline-block">
                             <h2 class="text-white" style="font-size: 15px;"><?php echo env('CURRENCY'); ?>{{ number_format($order_total-$order_tax, 2) }}</h2>

@@ -25,8 +25,10 @@ class OrderController extends Controller
     {
         $getorders = Order::with('users')->select('order.*','users.name')->leftJoin('users', 'order.driver_id', '=', 'users.id')->where('order.created_at','LIKE','%' .date("Y-m-d") . '%')->get();
         $getdriver = User::where('type','3')->get();
+        $GetAllOrders = DB::table('order')->get();
+        // $GetAllOrders = Order::with('users')->select('order.*','users.name')->leftJoin('users', 'order.driver_id', '=', 'users.id')->where('order.created_at')->get();
 
-        return view('orders',compact('getorders','getdriver'));
+        return view('orders',compact('getorders','getdriver', 'GetAllOrders'));
     }
 
     /**
@@ -58,6 +60,7 @@ class OrderController extends Controller
      */
     public function invoice(Request $request)
     {
+        $GetAllOrders = Order::all();
         $getusers = Order::with('users')->where('order.id', $request->id)->get()->first();
         $getorders=OrderDetails::with('itemimage')->select('order_details.id','order_details.qty','order_details.price as total_price','item.id','item.item_name','item.item_price','order_details.item_id','order_details.addons_id','order_details.item_notes')
         ->join('item','order_details.item_id','=','item.id')
@@ -74,6 +77,14 @@ class OrderController extends Controller
         }
         return view('invoice',compact('getorders','getusers'));
     }
+
+    // public function cak(Request $request)
+    // {
+        // $getusers = Order::with('users')->where('order.id', $request->id)->get()->first();
+    //     $GetAllOrders=OrderDetails::table('order')->get();
+        
+    //     return view('invoice',compact('GetAllOrders','getusers'));
+    // }
 
     /**
      * Show the form for editing the specified resource.

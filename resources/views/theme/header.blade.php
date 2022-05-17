@@ -7,7 +7,7 @@
             <!-- <b class="logo-abbr"><img src="{!! asset('public/assets/images/logo.png') !!}" alt=""> </b>
             <span class="logo-compact"><img src="{!! asset('public/assets/images/logo-compact.png') !!}" alt=""></span> -->
             <span class="brand-title" style="color: #fff;">
-                Orange Coffee
+                Traidly
                  <!-- <img src="{!! asset('public/front/images/logo.jpg') !!}" width="190px;">-->
             </span>
         </a>

@@ -5,6 +5,7 @@
             <th>Category</th>
             <th>Product Name</th>
             <th>Price</th>
+            <th>Quantity</th>
             <th>Delivery Time</th>
             <th>Action</th>
         </tr>
@@ -19,6 +20,7 @@
             <td>{{@$item['category']->category_name}}</td>
             <td>{{$item->item_name}}</td>
             <td><?php echo env('CURRENCY').' '.number_format($item->item_price, 2); ?></td>
+            <td>{{$item->quantity}}</td>
             <td>{{$item->delivery_time}}</td>
             <td>
                 <span>
